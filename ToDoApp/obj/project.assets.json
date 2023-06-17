@@ -3605,11 +3605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Tarun Giri\\NAGP\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
+      "projectUniqueName": "C:\\Tarun Giri\\NAGP\\Assignment\\todoapp\\ToDoApp\\ToDoApp.csproj",
       "projectName": "ToDoApp",
-      "projectPath": "C:\\Tarun Giri\\NAGP\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
+      "projectPath": "C:\\Tarun Giri\\NAGP\\Assignment\\todoapp\\ToDoApp\\ToDoApp.csproj",
       "packagesPath": "C:\\Users\\tarungiri\\.nuget\\packages\\",
-      "outputPath": "C:\\Tarun Giri\\NAGP\\ToDoApp\\ToDoApp\\obj\\",
+      "outputPath": "C:\\Tarun Giri\\NAGP\\Assignment\\todoapp\\ToDoApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tarungiri\\AppData\\Roaming\\NuGet\\NuGet.Config",
