@@ -1,0 +1,18 @@
+# ConfigMap for database
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+data:
+  DATABASE_SERVER: database.default.svc.cluster.local
+  DATABASE_PORT: "1433"
+---
+# Secrets for database
+apiVersion: v1
+kind: Secret
+metadata:
+  name: database-secrets
+type: Opaque
+data:
+  DATABASE_USER_ID: "c2E="
+  DATABASE_PASSWORD: "V2VsY29tZUAxOTkx"

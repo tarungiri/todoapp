@@ -1,0 +1,59 @@
+# Storage Class for dynamically assign persistent volumes
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: todo-db-storage
+provisioner: kubernetes.io/gce-pd
+reclaimPolicy: Retain
+parameters:
+  type: pd-standard
+  fstype: ext4
+  replication-type: none
+---
+# Headless service to be responsible for the network identity of the database pod
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+spec:
+  clusterIP: None
+  selector:
+    app: database
+  ports:
+    - name: database-port
+      protocol: TCP
+      port: 1433
+---
+# Statefulset for creation of database pod
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database
+spec:
+  serviceName: database
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  updateStrategy:
+    type: OnDelete
+  template:
+    metadata:
+      labels:
+        app: database
+    spec:
+      containers:
+        - name: database
+          image: tarungiri1991/tododb:2.0
+          volumeMounts:
+            - name: database-data
+              mountPath: /var/opt/mssql/data/
+  volumeClaimTemplates:
+    - metadata:
+        name: database-data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: todo-db-storage
+        resources:
+          requests:
+            storage: 3Gi
