@@ -1,4 +1,5 @@
 # todoapp
+This is a small project created just for assignment purpose.
 
 # Source code repository
 https://github.com/tarungiri/todoapp
