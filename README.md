@@ -1,6 +1,10 @@
 # todoapp
 This is a small project created just for assignment purpose.
 
+**Deployment** folder contains all the YAML files used.
+
+Database docker file present on root level and service api docker file inside **ToDoApp** folder.
+
 # Source code repository
 https://github.com/tarungiri/todoapp
 
@@ -11,8 +15,4 @@ https://github.com/tarungiri/todoapp
 
 # Service API tier url
 http://34.172.187.141/todos
-
-**Deployment** folder contains all the YAML files used.
-
-Database docker file present on root level and service api docker file inside **ToDoApp** folder.
 
