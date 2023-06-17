@@ -9,5 +9,5 @@ https://github.com/tarungiri/todoapp
 2. https://hub.docker.com/r/tarungiri1991/todo-api
 
 # Service API tier url
-34.172.187.141/todos
+http://34.172.187.141/todos
 
